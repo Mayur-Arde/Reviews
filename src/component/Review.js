@@ -6,6 +6,7 @@ const Review = () => {
   const [index, setIndex] = useState(0);
   const {name , job ,image, text} = people[index];
 
+  // check the number and make it accordind to number of reviews we have 
   const checkNumber = (number)=>{
     if (number > people.length -1){
       return 0;
@@ -15,7 +16,7 @@ const Review = () => {
       return number;
     }
   }
-
+//  previous review 
   const prevPerson = () =>{
     setIndex((index) =>{
       let newPerson = index - 1;
@@ -23,6 +24,7 @@ const Review = () => {
     })
   }
 
+  // next review 
   const nextPerson = () => {
     setIndex((index) => {
       let newPerson = index + 1;
@@ -30,6 +32,7 @@ const Review = () => {
     });
   };
 
+  // to get random review
   const randomPerson = () =>{
     let randomNumber = Math.floor(Math.random() * people.length);
     if (randomNumber === index){
