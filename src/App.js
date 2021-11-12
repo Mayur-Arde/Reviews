@@ -1,5 +1,5 @@
 import React from 'react';
-import Review from './Review';
+import Review from './component/Review';
 function App() {
   return (
     <main>
